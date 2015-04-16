@@ -1,0 +1,63 @@
+include _mixins.jade
+ 
+doctype html
+html(lang="es")
+  head
+    +head("ComparTips")
+  body
+    .wrapperRegistered
+        +sidebar
+        .fullDocument
+            header.mainHeader.innerHeader 
+              +headerRegistered
+              .hrdots
+            .container
+                .mainTitle.tag.purple Mi mente 
+                .mainTitle.purple LA NUTRICION DE LA SALUD MENTAL
+                .contenidoDeArticulo
+                  .rowArticulo
+                    .imagenDeArticulo
+                        img(src="_assets/img/imagenDeArticuloOtro.png", alt="")
+                    .notaDeArticulo.purple
+                        .ranking(class="r_3")
+                            - for(var i=0; i<5;i++)
+                             .star
+                        .texto 
+                            p Las hamburguesas son pastelitos tradicionalmente preparados con carne picada y que se sirven fritos acompañados de pan, algunas verduras, salsas y encurtidos. Bueno, suponemos que dada la popularidad de las hamburguesas más o menos tenéis una idea de cómo son. 
+                            p The link between mental health and nutrition is an often overlooked one. Good nutrition can reduce the risks of developing a depressive disorder.
+ 
+                            p Studies have found that people who eat a diet of whole foods – fruits, vegetables, whole grains, and high-quality proteins – show a reduced risk of developing some types of mental health problems. Consuming foods high in selenium, calcium, and magnesium can help with memory and stress relief, while folic acid and other B vitamins can relieve depression and fatigue.
+                    .clear
+                  .rowArticulo
+                    .fullWidth
+                        .texto
+                            p The infographic below shows the details on the link between nutrition and health and has recommendations for the types of food to increase in the diet. 
+                            img(src="_assets/img/infografia.png", alt="")
+                +sharing
+                
+                .hrshadow
+                
+                .secTitle.purple.nomobile OTRAS COMIDAS QUE PUEDEN INTERESARTE
+            section.module.purple.nomobile
+                .container
+                    section.notes
+                        +nota("_assets/img/notas/04.png", "4", "hidratarme al hacer ejercicio")
+                        +nota("_assets/img/notas/05.png", "1", "Test de una vida sedentaria")
+                        +nota("_assets/img/notas/06.png", "", "Tips de los expertos")
+                        .clear
+                .clear
+            .clear
+            
+
+            
+
+
+            script(src="_assets/js/_libs/jquery.js")
+            script(src="_assets/js/_libs/sidebar.js")
+            script(src="_assets/js/_libs/slideme2.js")
+            script(src="_assets/js/_libs/jquery.tooltipster.min.js")
+            script(src="_assets/js/_script.js")
+            footer
+                +footer
+
+  

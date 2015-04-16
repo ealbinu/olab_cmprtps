@@ -1,0 +1,13 @@
+
+// Editar la propiedad (fill='%23......') con el color hexadecimal. Se debe cambiar # por %23
+
+
+//ETIQUETA TAG
+.tag{
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='48px' width='215px'><g><path fill='%23fbb14e' d='m0 0h215l-24 48h-101.52l-8.856-8-7.787 8h-72.837v-48z'/></g></svg>");
+	background-position: bottom left; background-repeat: no-repeat;
+}
+//ESTRELLA
+ .starbg{
+ 	background-image: url("data:image/svg+xml;utf8,<svg width='20px' height='19px' xmlns='http://www.w3.org/2000/svg'><g><polygon fill='%23fbb14e' points='10 15 4.12214748 18.0901699 5.24471742 11.545085 0.489434837 6.90983006 7.06107374 5.95491503 10 0 12.9389263 5.95491503 19.5105652 6.90983006 14.7552826 11.545085 15.8778525 18.0901699'></polygon></g></svg>");
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <title>ComparTips</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="_assets/css/_style.css"/>
+  </head>
+  <body>
+    <nav class="profilebar">
+      <div class="contenidos"><a href="#" class="ocultar">OCULTAR MENÚ  X</a>
+        <div class="titulo"><img src="_assets/img/ico_contenidos.png" alt=""/>Contenidos</div>
+        <ul>
+          <li><a href="0.0.0.0_HomePage_NotRegistered.html">INICIO</a></li>
+          <li><a href="2.0.0.0_Content_Registered.html" class="active">MIS COMIDAS</a></li>
+          <li><a href="#">MI CUERPO</a></li>
+          <li><a href="7.0.0.0_ContentSamples_Infografia.html">MI MENTE</a></li>
+          <li><a href="#">BIENESTAR</a></li>
+        </ul>
+      </div>
+      <div class="secciones">
+        <div class="titulo"><img src="_assets/img/ico_secciones.png" alt=""/>Mis Secciones</div>
+        <ul>
+          <li><a href="#">Favoritos</a></li>
+          <li><a href="#">Recetas y Tips para 3 a 5 años</a></li>
+          <li><a href="#">DYI útiles</a></li>
+          <li><a href="#">Videos favoritos</a></li>
+          <li class="hider"><a href="#">Fín de Semana</a></li>
+          <li class="hider"><a href="#">Relax</a></li>
+          <li class="hider"><a href="#">Vacaciones</a></li>
+        </ul><a href="#" data-display=".secciones ul" class="seemore">Ver más </a>
+      </div><a href="2.2.0.0_SeccionesPersonalizadas_Administrar.html" class="admin">Administrar</a>
+      <div class="perfil">
+        <div class="titulo"><img src="_assets/img/ico_perfil.png" alt=""/>Mi Perfil</div>
+        <div class="profilepicture"><img src="_assets/img/fotoperfil.png" alt=""/></div>
+        <div class="name"><strong>Andrea Gómez</strong>, 32 años</div><a href="4.0.0.0_Profile_Edit.html" class="edit">Editar mi perfil</a>
+      </div>
+      <div class="closesec"><a class="closesession">Cerrar sesión</a></div>
+    </nav>
+    <div class="fullDocument">
+      <header class="mainHeader innerHeader"> 
+        <div id="header">
+          <div class="openProfileBar"></div>
+          <div class="logotype"><a href="#"><img src="_assets/img/compartips.png" alt="ComparTips"/></a></div>
+          <div class="session">&nbsp;</div>
+          <div class="searcher">
+            <form>
+              <div>
+                <input type="search" id="search" name="search" placeholder="Buscar"/>
+                <label for="search"><img src="_assets/img/search_lupa.png" alt="Buscar"/></label>
+              </div>
+            </form>
+          </div>
+          <nav class="main">
+            <button class="advancesearch"></button>
+          </nav>
+        </div>
+        <div class="hrdots"></div>
+      </header>
+      <div class="container">
+        <div class="mainTitle tag dark">Perfil </div>
+        <div class="mainTitle green">EDITA TU PERFIL</div>
+        <div class="formularioPerfil">
+          <form action="#">
+            <fieldset class="half">
+              <div class="secTitle green">TUS DATOS</div>
+              <div class="campo">
+                <label for="">Nombre*</label>
+                <input type="text">
+              </div>
+              <div class="campo">
+                <label for="">Apellido*</label>
+                <input type="text">
+              </div>
+              <div class="campo">
+                <label for="">Email*</label>
+                <input type="email">
+              </div>
+              <div class="campo">
+                <label for="">Repetir email*</label>
+                <input type="email">
+              </div>
+              <div class="campo">
+                <label for="">País*</label>
+                <select name="">
+                  <option>Seleccione País</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="">Ciudad*</label>
+                <select name="">
+                  <option>Seleccione una Ciudad</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="">Fecha de nacimiento*</label>
+                <div class="multinput">
+                  <select name="">
+                    <option>21</option>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                  </select>
+                  <select name="">
+                    <option>07</option>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                  </select>
+                  <select name="">
+                    <option>1976</option>
+                    <option value="">1990</option>
+                    <option value="">1991</option>
+                  </select>
+                </div>
+              </div>
+              <div class="campo">
+                <label for="">Género*</label>
+                <div class="multinput">
+                  <input type="radio" name="gen">
+                  <label for="">Masculino</label>
+                  <input type="radio" name="gen">
+                  <label for="">Femenino</label>
+                </div>
+              </div>
+              <div class="campo">
+                <label for="">Estado civil*</label>
+                <select name="">
+                  <option value="">Casado</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="">Nro. de hijos</label>
+                <select name="">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="">Foto de perfil</label>
+                <div class="multinput">
+                  <div class="imgc"><img src="#" alt=""></div>
+                  <button class="actionPlus image">Subir imagen</button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="half">
+              <div class="secTitle green">TUS INTERESES</div>
+              <div class="campo">
+                <select name="" class="half">
+                  <option value="">Añadir: Salud</option>
+                </select>
+                <select name="" class="half">
+                  <option value="">Añadir: Estilo de vida</option>
+                </select>
+              </div>
+              <div class="listado">
+                <label>Sexualidad</label>
+                <label>Comida</label>
+              </div>
+              <div class="listado">
+                <label>Embarazo</label>
+                <label>Literatura</label>
+              </div>
+              <div class="listado">
+                <label>Diabetes</label>
+                <label>Deporte</label>
+              </div>
+              <div class="listado">
+                <label>Autocuidado</label>
+                <label>Educación</label>
+              </div>
+              <div class="listado">
+                <label>Mascotas</label>
+                <label>Música</label>
+              </div>
+              <p>* Debes seleccionar al menos un interés de <strong>Salud</strong> y otro de <strong>Estilo de vida</strong></p>
+            </fieldset>
+            <fieldset class="full">
+              <div class="secTitle green">INFORMACIÓN FAMILIAR</div>
+              <div class="campo title">
+                <label>Nombre y Apellido</label>
+                <label>Parentesco</label>
+              </div>
+              <div class="campo inline">
+                <input type="text">
+                <input type="text">
+                <label for="" class="center">Fecha de nacimiento*</label>
+                <div class="multinput">
+                  <select name="">
+                    <option>21</option>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                  </select>
+                  <select name="">
+                    <option>07</option>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                  </select>
+                  <select name="">
+                    <option>1976</option>
+                    <option value="">1990</option>
+                    <option value="">1991</option>
+                  </select>
+                </div>
+                <button class="close">x</button>
+              </div>
+              <div class="campo inline">
+                <input type="text">
+                <input type="text">
+                <label for="" class="center">Fecha de nacimiento*</label>
+                <div class="multinput">
+                  <select name="">
+                    <option>21</option>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                  </select>
+                  <select name="">
+                    <option>07</option>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                  </select>
+                  <select name="">
+                    <option>1976</option>
+                    <option value="">1990</option>
+                    <option value="">1991</option>
+                  </select>
+                </div>
+                <button class="close">x</button>
+              </div>
+              <div class="campo inline">
+                <input type="text">
+                <input type="text">
+                <label for="" class="center">Fecha de nacimiento*</label>
+                <div class="multinput">
+                  <select name="">
+                    <option>21</option>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                  </select>
+                  <select name="">
+                    <option>07</option>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                  </select>
+                  <select name="">
+                    <option>1976</option>
+                    <option value="">1990</option>
+                    <option value="">1991</option>
+                  </select>
+                </div>
+                <button class="close">x</button>
+              </div>
+              <div class="campo inline toright">
+                <button class="actionPlus"><img src="_assets/img/ico_plusseccion.png" alt=""><span> Añadir</span></button>
+              </div>
+            </fieldset><br>
+            <fieldset class="full">
+              <div class="campo inline">
+                <label for="">Contraseña anterior*</label>
+                <input type="password">
+                <label for="">Nueva contraseña*</label>
+                <input type="password">
+              </div>
+              <div class="campo inline">
+                <label></label>
+                <label></label>
+                <label for="">Nueva contraseña*</label>
+                <input type="password">
+              </div>
+            </fieldset>
+            <div class="toright">
+              <button class="actionPlus">Cancelar</button>
+              <button class="btn">Actualizar</button>
+            </div>
+          </form>
+          <p class="notefoot">* Los campos marcados con un asterisco son obligatorios</p>
+        </div>
+      </div>
+      <script src="_assets/js/_libs/jquery.js"></script>
+      <script src="_assets/js/_libs/sidebar.js"></script>
+      <script src="_assets/js/_libs/slideme2.js"></script>
+      <script src="_assets/js/_libs/jquery.tooltipster.min.js"></script>
+      <script src="_assets/js/_script.js"></script>
+      <footer>
+        <div id="footer">
+          <div class="logotipo"><a href="#"><img src="_assets/img/compartips_f.png" alt="ComparTips"/></a></div>
+          <div class="footer-inner">
+            <nav class="second">
+              <ul>
+                <li><a href="0.0.0.0_HomePage_NotRegistered.html">Inicio</a></li>
+                <li>|</li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li>|</li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li>|</li>
+                <li><a href="#">Mapa de sitio</a></li>
+              </ul>
+            </nav>
+            <div class="clear"></div>
+            <div class="closureText">
+              <p>La información de este sitio está dirigida exclusivamente a personas que residan en Colombia.</p>COPYRIGHT © 2013-2015 PFIZER S.A.S., TODOS LOS DERECHOS RESERVADOS.- PROHIBIDA SU REPRODUCCION TOTAL O PARCIAL SIN AUTORIZACION DE SU TITULAR. LAS MARCAS UTILIZADAS EN EL PRESENTE DOCUMENTO SON MARCAS REGISTRADAS EN FAVOR DE SU TITULAR
+              <p>CONSULTE A SU MÉDICO</p>
+            </div>
+            <div class="pfizer"><a href="#"><img src="_assets/img/pfizer.png" alt="Pfizer"/></a></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

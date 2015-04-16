@@ -1,0 +1,156 @@
+include _mixins.jade
+
+doctype html
+html(lang="es")
+  head
+    +head("ComparTips")
+  body
+        +sidebar
+        .fullDocument
+            header.mainHeader.innerHeader 
+              +headerRegistered
+              .hrdots
+            .container
+                .mainTitle.tag.dark Perfil 
+                .mainTitle.green EDITA TU PERFIL
+                
+                .formularioPerfil
+                    form(action="#")
+                        fieldset.half
+                            .secTitle.green TUS DATOS
+                            .campo
+                                label(for="") Nombre*
+                                input(type="text")
+                            .campo
+                                label(for="") Apellido*
+                                input(type="text")
+                            .campo
+                                label(for="") Email*
+                                input(type="email")
+                            .campo
+                                label(for="") Repetir email*
+                                input(type="email")
+                            .campo
+                                label(for="") País*
+                                select(name="")
+                                    option Seleccione País
+                                    option(value="") 1
+                                    option(value="") 2
+                            .campo
+                                label(for="") Ciudad*
+                                select(name="")
+                                    option Seleccione una Ciudad
+                                    option(value="") 1
+                                    option(value="") 2
+                            .campo
+                                label(for="") Fecha de nacimiento*
+                                .multinput
+                                    select(name="")
+                                        option 21
+                                        option(value="") 01
+                                        option(value="") 02
+                                    select(name="")
+                                        option 07
+                                        option(value="") 01
+                                        option(value="") 02
+                                    select(name="")
+                                        option 1976
+                                        option(value="") 1990
+                                        option(value="") 1991
+                            .campo
+                                label(for="") Género*
+                                .multinput
+                                    input(type="radio", name="gen")
+                                    label(for="") Masculino
+                                    input(type="radio", name="gen")
+                                    label(for="") Femenino
+                            .campo
+                                label(for="") Estado civil*
+                                select(name="")
+                                    option(value="") Casado
+                                    option(value="") 1
+                                    option(value="") 2
+                            .campo
+                                label(for="") Nro. de hijos
+                                select(name="")
+                                    - for(var i=0; i<20; i++) 
+                                        option(value="#{i}") #{i}
+                            .campo
+                                label(for="") Foto de perfil
+                                .multinput
+                                    .imgc: img(src="#", alt="")
+                                    button.actionPlus.image Subir imagen
+                        fieldset.half
+                            .secTitle.green TUS INTERESES
+                            .campo
+                                select(name="").half
+                                    option(value="") Añadir: Salud
+                                select(name="").half
+                                    option(value="") Añadir: Estilo de vida
+                            .listado
+                                label Sexualidad
+                                label Comida
+                            .listado
+                                label Embarazo
+                                label Literatura
+                            .listado
+                                label Diabetes
+                                label Deporte
+                            .listado
+                                label Autocuidado
+                                label Educación
+                            .listado
+                                label Mascotas
+                                label Música
+                            p * Debes seleccionar al menos un interés de <strong>Salud</strong> y otro de <strong>Estilo de vida</strong>
+                        fieldset.full
+                            .secTitle.green INFORMACIÓN FAMILIAR
+                            .campo.title
+                                label Nombre y Apellido
+                                label Parentesco
+                            - for(var i=0; i<3; i++)
+                                .campo.inline
+                                    input(type="text")
+                                    input(type="text")
+                                    label(for="").center Fecha de nacimiento*
+                                    .multinput
+                                        select(name="")
+                                            option 21
+                                            option(value="") 01
+                                            option(value="") 02
+                                        select(name="")
+                                            option 07
+                                            option(value="") 01
+                                            option(value="") 02
+                                        select(name="")
+                                            option 1976
+                                            option(value="") 1990
+                                            option(value="") 1991
+                                    button.close x
+                            .campo.inline.toright
+                                button.actionPlus
+                                    img(src="_assets/img/ico_plusseccion.png", alt="")
+                                    span  Añadir
+                        br
+                        fieldset.full
+                            .campo.inline
+                                label(for="") Contraseña anterior*
+                                input(type="password")
+                                label(for="") Nueva contraseña*
+                                input(type="password")
+                            .campo.inline
+                                label
+                                label
+                                label(for="") Nueva contraseña*
+                                input(type="password")
+                        .toright
+                            button.actionPlus Cancelar
+                            button.btn Actualizar
+                    p.notefoot * Los campos marcados con un asterisco son obligatorios
+            script(src="_assets/js/_libs/jquery.js")
+            script(src="_assets/js/_libs/sidebar.js")
+            script(src="_assets/js/_libs/slideme2.js")
+            script(src="_assets/js/_libs/jquery.tooltipster.min.js")
+            script(src="_assets/js/_script.js")
+            footer
+                +footer

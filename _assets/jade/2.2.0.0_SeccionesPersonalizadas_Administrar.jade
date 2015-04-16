@@ -1,0 +1,42 @@
+include _mixins.jade
+ 
+doctype html
+html(lang="es")
+  head
+    +head("ComparTips")
+  body
+    .wrapperRegistered
+        +sidebar
+        .fullDocument
+            header.mainHeader.innerHeader 
+              +headerRegistered
+              .hrdots
+            .container
+                .mainTitle.tag.dark Administrar 
+                .mainTitle.green SECCIONES PERSONALIZADAS
+                  button(type="button").actionPlus
+                    img(src="_assets/img/ico_plusseccion.png", alt="")
+                    span Nueva sección
+                
+                .listadoSecciones
+                  - var inputs = ['Favoritos', 'Video favoritos', 'Vacaciones', 'Fín de semana', 'DYI útiles', 'Relax', 'Recetas y tips para 3 a 5 años']
+                    each inp, indx in inputs
+                      .listadoSeccion
+                        .nombre=inp
+                        .buttons
+                          a.btn Asignar color
+                          a.btn Renombrar
+                          a.btn Eliminar
+                
+
+            
+
+
+            script(src="_assets/js/_libs/jquery.js")
+            script(src="_assets/js/_libs/sidebar.js")
+            script(src="_assets/js/_libs/slideme2.js")
+            script(src="_assets/js/_libs/jquery.tooltipster.min.js")
+            script(src="_assets/js/_script.js")
+            footer
+                +footer
+

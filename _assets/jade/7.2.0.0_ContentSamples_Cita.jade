@@ -1,0 +1,50 @@
+include _mixins.jade
+ 
+doctype html
+html(lang="es")
+  head
+    +head("ComparTips")
+  body
+    .wrapperRegistered
+        +sidebar
+        .fullDocument
+            header.mainHeader.innerHeader 
+              +headerRegistered
+              .hrdots
+            .container
+                .mainTitle.tag.orange Mis comidas 
+                .mainTitle.orange 6 NO POR UNA VIDA MÁS SALUDABLE
+                .contenidoDeArticulo
+
+                  .rowArticulo
+                    .fullWidth
+                        .texto
+                            img(src="_assets/img/cita.png", alt="")
+                +sharing
+                
+                .hrshadow
+                
+                .secTitle.orange.nomobile OTRAS COMIDAS QUE PUEDEN INTERESARTE
+            section.module.orange.nomobile
+                .container
+                    section.notes
+                        +nota("_assets/img/notas/04.png", "4", "hidratarme al hacer ejercicio")
+                        +nota("_assets/img/notas/05.png", "1", "Test de una vida sedentaria")
+                        +nota("_assets/img/notas/06.png", "", "Tips de los expertos")
+                        .clear
+                .clear
+            .clear
+            
+
+            
+
+
+            script(src="_assets/js/_libs/jquery.js")
+            script(src="_assets/js/_libs/sidebar.js")
+            script(src="_assets/js/_libs/slideme2.js")
+            script(src="_assets/js/_libs/jquery.tooltipster.min.js")
+            script(src="_assets/js/_script.js")
+            footer
+                +footer
+
+   

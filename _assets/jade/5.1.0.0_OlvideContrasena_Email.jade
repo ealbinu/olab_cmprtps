@@ -1,0 +1,122 @@
+include _mixins.jade
+
+doctype html
+html(lang="es")
+  head
+    +head("ComparTips")
+  body
+    .fullDocument
+        header.mainHeader
+          +header
+          .hrdots
+          +rotador
+          .registro
+                .calltoaction
+                            a(href="#").registrese Regístrese
+                            a(href="#").iniciarsesion Iniciar sesión
+                .clear
+                header
+                    .title
+                        img(src="_assets/img/pencil.png", alt="Registro")
+                        | Regístrese en el sitio y accede a contenidos exclusivos
+                    a.porque(href="#") ¿Por qué registrarse?
+                .clear
+                .registro-inner
+                    form(action="")
+                        input(type="text", placeholder="Nombre")
+                        input(type="email", placeholder="Email")
+                        button(type="submit") Continuar
+                    .facebook-login
+                        div.text También puedes iniciar el registro con Facebook
+                        div.boton
+                            div.dots .......
+                            a(href="#")
+                                img(src="_assets/img/fbutton.png", alt="")
+                                span Ingresar con Facebook
+                    .clear
+                .clear
+        .clear.firstFromHeader
+        .container
+            .mainTitle ARTÍCULOS RECIENTES
+
+        section.module.yellow
+            .container
+                header
+                    .tag <span>MI CUERPO</span>
+                    .desc ARTÍCULOS RELACIONADOS CON EL CUIDADO DEL CUERPO
+                    button.display VER TODOS
+                    .clear
+                section.notes
+                    +nota("_assets/img/notas/01.png", "3", "hidratarme al hacer ejercicio")
+                    +nota("_assets/img/notas/02.png", "5", "Técnicas para hidratarme al hacer ejercicio")
+                    +nota("_assets/img/notas/03.png", "2", "Natación, salúd y deporte. ¿Por qué nadar?")
+                    .clear
+            .clear
+        .clear
+        section.module.orange
+            .container
+                header
+                    .tag <span>MIS COMIDAS</span>
+                    .desc ARTÍCULOS RELACIONADOS CON LOS HÁBITOS ALIMENTICIOS
+                    button.display VER TODOS
+                    .clear
+                section.notes
+                    +nota("_assets/img/notas/04.png", "4", "hidratarme al hacer ejercicio")
+                    +nota("_assets/img/notas/05.png", "1", "Test de una vida sedentaria")
+                    +nota("_assets/img/notas/06.png", "", "Tips de los expertos")
+                    .clear
+            .clear
+        .clear
+        section.module.green
+            .container
+                header
+                    .tag <span>BIENESTAR</span>
+                    .desc IDEAS PARA DISFRUTAR DE MOMENTOS INCREÍBLES
+                    button.display VER TODOS
+                    .clear
+                section.notes
+                    +nota("_assets/img/notas/07.png", "3", "hidratarme al hacer ejercicio")
+                    +nota("_assets/img/notas/08.png", "2", "Test de una vida sedentaria")
+                    +nota("_assets/img/notas/09.png", "1", "Viajes y salud")
+                    .clear
+            .clear
+        .clear
+        section.module.purple
+            .container
+                header
+                    .tag <span>MI MENTE</span>
+                    .desc ARTÍCULOS PARA MANTENER TU MENTE ACTIVA
+                    button.display VER TODOS
+                    .clear
+                section.notes
+                    +nota("_assets/img/notas/10.png", "5", "Test de una vida sedentaria")
+                    +nota("_assets/img/notas/11.png", "5", "Técnicas de relajación")
+                    +nota("_assets/img/notas/12.png", "4", "Literatura para todos los días")
+                    .clear
+            .clear
+        .clear
+
+
+
+
+        script(src="_assets/js/_libs/jquery.js")
+        script(src="_assets/js/_libs/sidebar.js")
+        script(src="_assets/js/_libs/slideme2.js")
+        script(src="_assets/js/_script.js")
+        footer
+            +footer
+
+
+.modalwindow
+    .modalwindowContainer
+        header 
+          img(src="_assets/img/ico_key.png", alt="")
+          span Olvidé <strong>mi contraseña</strong>
+          .close X
+        .contenidoArticulo
+            p.instruction.tocenter Porfavor ingresa tu dirección de email:
+            form(action="")
+                .campo.tocenter
+                    input(type="email")
+                .campo.tocenter
+                    a(href="#").btn Restablecer contraseña

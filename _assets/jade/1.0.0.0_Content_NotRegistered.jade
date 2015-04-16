@@ -1,0 +1,58 @@
+include _mixins.jade
+ 
+doctype html
+html(lang="es")
+  head
+    +head("ComparTips")
+  body
+    .fullDocument
+        header.mainHeader.innerHeader
+          +header
+          .hrdots
+        .container
+            .mainTitle.tag.orange Mis comidas 
+            .mainTitle.orange HAMBURGUESA DE POLLO Y LEGUMBRES
+            .contenidoDeArticulo
+                .imagenDeArticulo
+                    img(src="_assets/img/imagendearticulo.jpg", alt="")
+                .notaDeArticulo.orange
+                    .ranking(class="r_4")
+                        - for(var i=0; i<5;i++)
+                         .star
+                    .texto Las hamburguesas son pastelitos tradicionalmente preparados con carne picada y que se sirven fritos acompañados de pan, algunas verduras, salsas y encurtidos. Bueno, suponemos que dada la popularidad de las hamburguesas...
+                    .moduloRegistroInterno
+                        header
+                            img(src="_assets/img/ico_exclamacion.png", alt="")
+                            span Debes ser un usuario registrado para acceder a este contenido
+                        .accesoInterno
+                            .pregunta ¿Ya estás registrado?
+                            .campoYes
+                                span Sí, ya me registré
+                                a(href="#") Iniciar sesión
+                            .campoNo
+                                span Aún no
+                                a(href="#") Registrarme
+                        .clear
+                    .clear
+                .clear
+            
+            .hrshadow.nomobile
+
+            .secTitle.orange.nomobile OTRAS COMIDAS QUE PUEDEN INTERESARTE
+        section.module.orange.nomobile
+            .container
+                section.notes
+                    +nota("_assets/img/notas/04.png", "4", "hidratarme al hacer ejercicio")
+                    +nota("_assets/img/notas/05.png", "1", "Test de una vida sedentaria")
+                    +nota("_assets/img/notas/06.png", "", "Tips de los expertos")
+                    .clear
+            .clear
+        .clear
+        
+
+        script(src="_assets/js/_libs/jquery.js")
+        script(src="_assets/js/_libs/sidebar.js")
+        script(src="_assets/js/_libs/slideme2.js")
+        script(src="_assets/js/_script.js")
+        footer
+            +footer

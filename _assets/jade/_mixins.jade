@@ -1,0 +1,137 @@
+mixin head(titleText)
+  meta(charset="utf-8")
+  title=titleText
+  meta(name="description" content="")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  link(rel="stylesheet", href="_assets/css/_style.css")
+  
+
+mixin header
+    #header
+        .logotype
+            a(href="#"): img(src="_assets/img/compartips.png", alt="ComparTips")
+        .session
+            ul
+                li: a(href="0.0.0.0_HomePage_NotRegistered.html") INICIO
+                li: a(href="3.0.0.0_Register_Choose.html") REGÍSTRESE
+                li: a(href="#") INICIAR SESIÓN
+        .searcher
+            form
+                div
+                    input(type="search", id="search", name="search", placeholder="Buscar")
+                    label(for="search"): img(src="_assets/img/search_lupa.png", alt="Buscar")
+        nav.main
+            button.advancesearch 
+
+mixin headerRegistered
+    #header
+        .openProfileBar
+        .logotype
+            a(href="#"): img(src="_assets/img/compartips.png", alt="ComparTips")
+        .session &nbsp;
+        .searcher
+            form
+                div
+                    input(type="search", id="search", name="search", placeholder="Buscar")
+                    label(for="search"): img(src="_assets/img/search_lupa.png", alt="Buscar")
+        nav.main
+            button.advancesearch
+            
+mixin rotador
+    .rotador
+        ul.slideme
+            li.slide1
+                .container
+                    .t1 ¿Qué es? <span>ComparTips</span>?
+                    .t2 Es un sitio de recomendaciones y contenidos <br> exclusivos para pacientes Pfizer.
+            li.slide2
+                .container
+                    .t1 Un espacio <span>para<br> compartir tus ideas</span>
+                    .t2 Un sitio de contenidos exclusivos <br> para pacientes de Pfizer.
+    
+
+mixin footer
+    #footer
+        .logotipo
+            a(href="#"): img(src="_assets/img/compartips_f.png", alt="ComparTips")
+        .footer-inner
+            nav.second
+                ul
+                    li: a(href="0.0.0.0_HomePage_NotRegistered.html") Inicio
+                    li |
+                    li: a(href="#") Política de privacidad
+                    li |
+                    li: a(href="#") Términos y condiciones
+                    li |
+                    li: a(href="#") Mapa de sitio
+            .clear
+            .closureText
+                p La información de este sitio está dirigida exclusivamente a personas que residan en Colombia.
+                |COPYRIGHT © 2013-2015 PFIZER S.A.S., TODOS LOS DERECHOS RESERVADOS.- PROHIBIDA SU REPRODUCCION TOTAL O PARCIAL SIN AUTORIZACION DE SU TITULAR. LAS MARCAS UTILIZADAS EN EL PRESENTE DOCUMENTO SON MARCAS REGISTRADAS EN FAVOR DE SU TITULAR
+                p CONSULTE A SU MÉDICO
+            .pfizer
+                a(href="#"): img(src="_assets/img/pfizer.png", alt="Pfizer")
+        .clear
+
+mixin sidebar
+    nav.profilebar
+        .contenidos
+            a.ocultar(href="#") OCULTAR MENÚ  X
+            .titulo
+                img(src="_assets/img/ico_contenidos.png", alt="")
+                | Contenidos
+            ul
+                li: a(href="0.0.0.0_HomePage_NotRegistered.html") INICIO
+                li: a(href="2.0.0.0_Content_Registered.html").active MIS COMIDAS
+                li: a(href="#") MI CUERPO
+                li: a(href="7.0.0.0_ContentSamples_Infografia.html") MI MENTE
+                li: a(href="#") BIENESTAR
+        .secciones
+            .titulo
+                img(src="_assets/img/ico_secciones.png", alt="")
+                | Mis Secciones
+            ul
+                li: a(href="#") Favoritos
+                li: a(href="#") Recetas y Tips para 3 a 5 años
+                li: a(href="#") DYI útiles
+                li: a(href="#") Videos favoritos
+                li.hider: a(href="#") Fín de Semana
+                li.hider: a(href="#") Relax
+                li.hider: a(href="#") Vacaciones
+            a(href="#", data-display=".secciones ul").seemore Ver más 
+                
+        a(href="2.2.0.0_SeccionesPersonalizadas_Administrar.html").admin Administrar
+        .perfil
+            .titulo
+                img(src="_assets/img/ico_perfil.png", alt="")
+                | Mi Perfil
+            .profilepicture
+                img(src="_assets/img/fotoperfil.png", alt="")
+            .name <strong>Andrea Gómez</strong>, 32 años
+            a(href="4.0.0.0_Profile_Edit.html").edit Editar mi perfil
+        .closesec
+            a.closesession Cerrar sesión
+
+mixin nota(img, estrellas, titulo)
+    article
+        a(href="#")
+            .thumbnail
+                img(src=img, alt="")
+            .ranking(class="r_#{estrellas}")
+                - for(var i=0; i<5;i++)
+                 .star
+            .title=titulo
+            .clear
+
+mixin sharing
+    .sharing
+        - var networks = [['sh_tw.png', 'Tweet',''], ['sh_fb.png', 'Me gusta',''], ['sh_gp.png','Plus One',''], ['sh_pi.png', 'Pin',''], ['sh_fav.png', 'Agregar a Favoritos','.agregarAFavoritos']] 
+        each val in networks
+            if val[2]
+                a(data-tooltip=val[2]).tooltipExec
+                    img(src="_assets/img/#{val[0]}", alt="")
+                    span=val[1]
+            else 
+                a(href="#")
+                    img(src="_assets/img/#{val[0]}", alt="")
+                    span=val[1]

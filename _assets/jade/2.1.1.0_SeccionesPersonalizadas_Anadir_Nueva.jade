@@ -1,0 +1,93 @@
+include _mixins.jade
+
+doctype html
+html(lang="es")
+  head
+    +head("ComparTips")
+  body
+    .wrapperRegistered
+        +sidebar
+        .fullDocument
+            header.mainHeader.innerHeader 
+              +headerRegistered
+              .hrdots
+            .container
+                .mainTitle.tag.orange Mis comidas 
+                .mainTitle.orange HAMBURGUESA DE POLLO Y LEGUMBRES
+                .contenidoDeArticulo
+                  .rowArticulo
+                    .imagenDeArticulo
+                        img(src="_assets/img/imagendearticulo.jpg", alt="")
+                    .notaDeArticulo.orange
+                        .ranking(class="r_4")
+                            - for(var i=0; i<5;i++)
+                             .star
+                        .texto 
+                            p Las hamburguesas son pastelitos tradicionalmente preparados con carne picada y que se sirven fritos acompañados de pan, algunas verduras, salsas y encurtidos. Bueno, suponemos que dada la popularidad de las hamburguesas más o menos tenéis una idea de cómo son. 
+                            p Pues las hamburguesas vegetales, vegetarianas o veganas son una mezcla de alimentos vegetales a las que se les da la misma forma, redonda u ovalada, aplanada, y que se cocinan a la sartén, freidora, microondas, horno, parrilla o grill, exactamente igual que cualquier otra hamburguesa.
+                    .clear
+                  .rowArticulo
+                    .notaDeArticulo.orange
+                        .secTitle.orange PREPARACIÓN
+                        .texto
+                            p Para las hamburguesas, en una licuadora, procesar los garbanzos con las lentejas cocidas, pasar a un bol y agregar perejil picado, cebolla, ajo y queso rallados más los huevos. Agregar pan rallado de a poco, no debe quedar seco, debe quedar una masa húmeda. Salpimentar.
+ 
+                            p Tomar parte de la masa y darle forma de hamburguesa con la  mano o molde y colocar en placa aceitada. Cocer al horno medio hasta que el huevo ligue.
+                    .imagenDeArticulo
+                        img(src="_assets/img/imagendearticulo2.jpg", alt="")
+                            
+                +sharing
+                
+                .hrshadow
+                
+                .secTitle.orange OTRAS COMIDAS QUE PUEDEN INTERESARTE
+            section.module.orange
+                .container
+                    section.notes
+                        +nota("_assets/img/notas/04.png", "4", "hidratarme al hacer ejercicio")
+                        +nota("_assets/img/notas/05.png", "1", "Test de una vida sedentaria")
+                        +nota("_assets/img/notas/06.png", "", "Tips de los expertos")
+                        .clear
+                .clear
+            .clear
+            
+
+            
+
+
+            script(src="_assets/js/_libs/jquery.js")
+            script(src="_assets/js/_libs/sidebar.js")
+            script(src="_assets/js/_libs/slideme2.js")
+            script(src="_assets/js/_libs/jquery.tooltipster.min.js")
+            script(src="_assets/js/_script.js")
+            footer
+                +footer
+
+    .tooltipContainer.agregarAFavoritos
+        .agregarAFavoritosContainer.contenedorTooltip
+            header 
+              img(src="_assets/img/ico_sPersonalizada.png", alt="")
+              span Añadir a <strong>sección personalizada</strong>
+              .close X
+            .contenidoArticulo
+              .imagenDeArticulo
+                img(src="_assets/img/imagenDeArticulo_thumb.png", alt="")
+              .mainTitle.orange HAMBURGUESA DE POLLO Y LEGUMBRES
+            .contenidoAccion
+              strong.title Nueva sección:
+              form(action="")
+                .formContainer.addSection
+                 .inputText
+                   label Nombre
+                   input(type="text", placeholder="Mi nueva sección")
+                 .inputButtons
+                   label Color:
+                   .buttons
+                     - for(var i=0; i<8; i++)
+                       button
+                .formButtons
+                  a(href="#").actionPlus < Volver a la selección de secciones
+                  
+                  button(type="submit").submitBtn Crear sección y añadir artículo
+              
+              
